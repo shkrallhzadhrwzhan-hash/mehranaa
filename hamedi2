@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>Hamedi 2</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    direction: rtl;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #434343, #000000);
+}
+
+.box {
+    width: 90%;
+    max-width: 500px;
+    padding: 50px 30px;
+    text-align: center;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 30px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+
+    animation: appear 0.8s ease;
+}
+
+h1 {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #ccc;
+    font-size: 20px;
+}
+
+.emoji {
+    font-size: 55px;
+    animation: shake 1s infinite;
+}
+
+@keyframes shake {
+    0%,100% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <div class="emoji">🖕🏻</div>
+
+    <h1>سیکتیر</h1>
+    <p> ایشاله وقتی اب میخوری اب دهنت بپره تو گلوت خفه شی بمیری،سگ</p>
+
+</div>
+
+</body>
+</html>
