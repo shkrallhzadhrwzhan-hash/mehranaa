@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>Hamedi 4</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    direction: rtl;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        -45deg,
+        #ff758c,
+        #ff7eb3,
+        #a18cd1,
+        #6a82fb
+    );
+
+    background-size: 400% 400%;
+
+    animation: backgroundMove 10s ease infinite;
+}
+
+‎/* کارت اصلی */
+
+.box {
+    position: relative;
+    z-index: 5;
+
+    width: 90%;
+    max-width: 520px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.16);
+
+    backdrop-filter: blur(25px);
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.3);
+
+    animation: appear 1.2s ease;
+}
+
+h1 {
+    color: white;
+    font-size: 32px;
+
+    margin-bottom: 30px;
+
+    text-shadow:
+        0 3px 15px rgba(0,0,0,0.2);
+}
+
+‎/* دیسک موزیک */
+
+.disc {
+    width: 120px;
+    height: 120px;
+
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #ff4f81 0 12%,
+            #222 13% 18%,
+            #111 19% 100%
+        );
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,0.4);
+
+    animation: spin 5s linear infinite;
+}
+
+.disc::after {
+    content: "";
+
+    display: block;
+
+    width: 25px;
+    height: 25px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    top: 47px;
+    left: 47px;
+}
+
+‎/* متن */
+
+.message {
+    color: white;
+    font-size: 21px;
+
+    margin-bottom: 30px;
+
+    animation: pulse 2s infinite;
+}
+
+‎/* دکمه */
+
+button {
+    width: 100%;
+
+    padding: 17px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: white;
+
+    color: #e75480;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+‎/* موج صدا */
+
+.sound {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    height: 45px;
+
+    margin-bottom: 25px;
+}
+
+.bar {
+    width: 6px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    animation: sound 1s infinite ease-in-out;
+}
+
+.bar:nth-child(1) {
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.bar:nth-child(2) {
+    height: 35px;
+    animation-delay: .2s;
+}
+
+.bar:nth-child(3) {
+    height: 25px;
+    animation-delay: .4s;
+}
+
+.bar:nth-child(4) {
+    height: 40px;
+    animation-delay: .1s;
+}
+
+.bar:nth-child(5) {
+    height: 25px;
+    animation-delay: .3s;
+}
+
+‎/* قلب‌ها */
+
+.heart {
+    position: absolute;
+
+    color: white;
+
+    font-size: 30px;
+
+    opacity: .7;
+
+    animation: heartFloat 6s infinite ease-in-out;
+}
+
+.h1 {
+    top: 10%;
+    left: 10%;
+}
+
+.h2 {
+    top: 20%;
+    right: 12%;
+    animation-delay: 1s;
+}
+
+.h3 {
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.h4 {
+    bottom: 10%;
+    right: 15%;
+    animation-delay: 3s;
+}
+
+‎/* نورهای پس‌زمینه */
+
+.glow {
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.12);
+
+    filter: blur(10px);
+
+    animation: glowMove 7s infinite alternate;
+}
+
+.g1 {
+    top: -50px;
+    left: -50px;
+}
+
+.g2 {
+    bottom: -50px;
+    right: -50px;
+
+    animation-delay: 2s;
+}
+
+‎/* انیمیشن‌ها */
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes sound {
+    0%,100% {
+        transform: scaleY(.5);
+    }
+
+    50% {
+        transform: scaleY(1.5);
+    }
+}
+
+@keyframes pulse {
+    0%,100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .6;
+    }
+}
+
+@keyframes heartFloat {
+    0%,100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-40px) rotate(15deg);
+    }
+}
+
+@keyframes glowMove {
+    from {
+        transform: translate(0,0);
+    }
+
+    to {
+        transform: translate(100px,50px);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+</style>
+</head>
+
+<body>
+
+‎<!-- نورها -->
+
+<div class="glow g1"></div>
+<div class="glow g2"></div>
+
+‎<!-- قلب‌های شناور -->
+
+<div class="heart h1">♡</div>
+<div class="heart h2">✦</div>
+<div class="heart h3">♡</div>
+<div class="heart h4">✧</div>
+
+‎<!-- کارت -->
+
+<div class="box">
+
+‎    <!-- دیسک موزیک -->
+
+    <div class="disc"></div>
+
+    <h1>پس آهنگ خوشگل بفرست): </h1>
+
+    <div class="sound">
+
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+
+    </div>
+
+    <div class="message">
+‎        منتظرم... 😙♡
+    </div>
+
+    <button onclick="alert('منتظر آهنگتم 🎶')">
+‎        باشه، آهنگ می‌فرستم 🎵
+    </button>
+
+</div>
+
+</body>
+</html>
