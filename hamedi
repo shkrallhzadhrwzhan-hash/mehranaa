@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>Hamedi</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    direction: rtl;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.box {
+    width: 90%;
+    max-width: 500px;
+    padding: 45px 30px;
+    text-align: center;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+
+    animation: appear 1s ease;
+}
+
+h1 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    margin: 12px 0;
+
+    border: none;
+    border-radius: 16px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+.bad {
+    background: #ff6b81;
+    color: white;
+}
+
+.busy {
+    background: white;
+    color: #667eea;
+}
+
+.float {
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    opacity: 0.7;
+
+    animation: float 5s infinite ease-in-out;
+}
+
+.a { top: 15%; left: 10%; }
+.b { top: 20%; right: 12%; animation-delay: 1s; }
+.c { bottom: 15%; left: 18%; animation-delay: 2s; }
+.d { bottom: 20%; right: 15%; animation-delay: 3s; }
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(15deg);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="float a">♡</div>
+<div class="float b">✦</div>
+<div class="float c">♡</div>
+<div class="float d">✧</div>
+
+<div class="box">
+
+    <h1>چرا سینم نمی‌زنی؟ 😡</h1>
+
+    <button class="bad"
+    onclick="window.location.href='hamedi2.html'">
+‎        چون بی‌شعورم
+    </button>
+
+    <button class="busy"
+    onclick="window.location.href='hamedi3.html'">
+‎        چون وقت نداشتم
+    </button>
+
+</div>
+
+</body>
+</html>
