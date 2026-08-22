@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>Hamedi 3</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    direction: rtl;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+.box {
+    width: 90%;
+    max-width: 500px;
+    padding: 45px 30px;
+    text-align: center;
+
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 30px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+
+    animation: appear 1s ease;
+}
+
+h1 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    margin: 12px 0;
+
+    border: none;
+    border-radius: 16px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.04);
+}
+
+.yes {
+    background: white;
+    color: #ff4f81;
+}
+
+.no {
+    background: rgba(0,0,0,0.2);
+    color: white;
+}
+
+.heart {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    animation: float 5s infinite ease-in-out;
+}
+
+.one { top: 15%; left: 10%; }
+.two { top: 25%; right: 10%; animation-delay: 1s; }
+.three { bottom: 15%; left: 15%; animation-delay: 2s; }
+.four { bottom: 20%; right: 15%; animation-delay: 3s; }
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-35px);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="heart one">♡</div>
+<div class="heart two">✦</div>
+<div class="heart three">♡</div>
+<div class="heart four">✧</div>
+
+<div class="box">
+
+    <h1></h1>آیا می‌خواهی جبران کنی برام حامدی؟؟؟؟؟؟؟؟؟؟ </h1>
+
+    <button class="yes"
+    onclick="window.location.href='hamedi4.html'">
+‎         با کمال میل عزیزم☹️
+    </button>
+
+    <button class="no"
+    onclick="window.location.href='hamedi2.html'">
+‎        (من یک بی‌شعورم)خیر
+    </button>
+
+</div>
+
+</body>
+</html>
